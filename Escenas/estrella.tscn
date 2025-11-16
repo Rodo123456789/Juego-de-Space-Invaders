@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://cj33ttiaddja0"]
+
+[ext_resource type="Texture2D" uid="uid://snnwk51b5qes" path="res://Sprites/estrella.png" id="1_un0h6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa6uh"]
+
+[sub_resource type="Animation" id="Animation_i6x31"]
+resource_name = "estrella"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_8a62y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r4sgw"]
+_data = {
+"RESET": SubResource("Animation_8a62y"),
+"estrella": SubResource("Animation_i6x31")
+}
+
+[node name="estrella" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_aa6uh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.048893, 0.0445261)
+texture = ExtResource("1_un0h6")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r4sgw")
+}
+autoplay = "estrella"

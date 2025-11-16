@@ -1,0 +1,119 @@
+[gd_scene load_steps=10 format=3 uid="uid://bv0mmuxinw000"]
+
+[ext_resource type="Texture2D" uid="uid://dpo71trcgq7gm" path="res://Sprites/jugador.png" id="1_47o3g"]
+[ext_resource type="Script" uid="uid://cedarelolboar" path="res://Escenas/jugador.gd" id="1_r1itm"]
+[ext_resource type="AudioStream" uid="uid://23cqle7hxdmy" path="res://audios/shoot.wav" id="3_lkok0"]
+[ext_resource type="AudioStream" uid="uid://q5fwywru6xl7" path="res://audios/lacer.wav" id="4_myi22"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y101x"]
+size = Vector2(70, 46)
+
+[sub_resource type="Animation" id="Animation_kqq11"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_pc4vy"]
+resource_name = "eliminado"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"eliminar_jugador"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_k6tc5"]
+resource_name = "vivo"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8x1b1"]
+_data = {
+&"RESET": SubResource("Animation_kqq11"),
+&"eliminado": SubResource("Animation_pc4vy"),
+&"vivo": SubResource("Animation_k6tc5")
+}
+
+[node name="Jugador" type="CharacterBody2D" groups=["nave"]]
+script = ExtResource("1_r1itm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+color = Color(0.0108278, 0.00124659, 1.88011e-10, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_y101x")
+
+[node name="Timer_disparo" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.853646, 0.956855, 1)
+texture_filter = 1
+position = Vector2(0.187495, -11.75)
+scale = Vector2(4.50833, 6.4375)
+texture = ExtResource("1_47o3g")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8x1b1")
+}
+autoplay = "vivo"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lkok0")
+volume_db = -13.118
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_myi22")
+
+[connection signal="timeout" from="Timer_disparo" to="." method="_on_timer_disparo_timeout"]

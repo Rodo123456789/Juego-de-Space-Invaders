@@ -1,0 +1,129 @@
+[gd_scene load_steps=8 format=3 uid="uid://dvblygquqqkqy"]
+
+[ext_resource type="Script" uid="uid://co6y2ogye65u7" path="res://Escenas/victoria.gd" id="1_6wvpb"]
+[ext_resource type="Texture2D" uid="uid://dqa0odgmxtppr" path="res://fondos/12.jpg" id="1_ykot6"]
+[ext_resource type="FontFile" uid="uid://lu6bied6ff6" path="res://fondos_letras/AtariClassic-gry3.ttf" id="2_7mry3"]
+[ext_resource type="FontFile" uid="uid://cvea6v0tf8hj3" path="res://fondos_letras/AtariClassicSmooth-XzW2.ttf" id="3_e5foq"]
+[ext_resource type="FontFile" uid="uid://vpsh1pyktdqn" path="res://fondos_letras/AtariClassicChunky-PxXP.ttf" id="4_t023v"]
+[ext_resource type="PackedScene" uid="uid://cj33ttiaddja0" path="res://Escenas/estrella.tscn" id="6_aewrj"]
+[ext_resource type="AudioStream" uid="uid://j1vmb545kn5g" path="res://audios/Rocky-victoria.wav" id="7_yj4g4"]
+
+[node name="victoria" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6wvpb")
+
+[node name="fondo" type="Sprite2D" parent="."]
+modulate = Color(0.00585724, 0.129791, 0.223381, 1)
+position = Vector2(446, 502.5)
+scale = Vector2(0.926531, 1.02143)
+texture = ExtResource("1_ykot6")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 242.0
+offset_right = 778.0
+offset_bottom = 666.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 34.0
+offset_right = 594.0
+offset_bottom = 167.0
+theme_override_fonts/font = ExtResource("2_7mry3")
+theme_override_font_sizes/font_size = 78
+text = "Ganaste"
+
+[node name="Jugar" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 173.0
+offset_right = 506.0
+offset_bottom = 268.0
+theme_override_fonts/font = ExtResource("3_e5foq")
+theme_override_font_sizes/font_size = 28
+text = "Volver a jugar"
+
+[node name="menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 581.0
+offset_right = 587.0
+offset_bottom = 650.0
+theme_override_fonts/font = ExtResource("4_t023v")
+theme_override_font_sizes/font_size = 17
+text = "Regresar al menu"
+
+[node name="estrellas" type="Node2D" parent="."]
+
+[node name="estrella" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(54, 69)
+
+[node name="estrella2" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(445, 109)
+
+[node name="estrella3" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(809, 437)
+
+[node name="estrella4" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(293, 347)
+
+[node name="estrella5" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(747, 323)
+
+[node name="estrella6" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(111, 353)
+
+[node name="estrella7" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(449, 291)
+
+[node name="estrella8" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(665, 231)
+
+[node name="estrella9" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(187, 197)
+
+[node name="estrella10" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(805, 93)
+
+[node name="estrella11" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(237, 571)
+
+[node name="estrella12" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(605, 585)
+
+[node name="estrella13" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(809, 641)
+
+[node name="estrella14" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(71, 641)
+
+[node name="estrella15" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(395, 721)
+
+[node name="estrella16" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(617, 803)
+
+[node name="estrella17" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(165, 823)
+
+[node name="estrella18" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(407, 937)
+
+[node name="estrella19" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(829, 925)
+
+[node name="estrella20" parent="estrellas" instance=ExtResource("6_aewrj")]
+position = Vector2(59, 949)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_yj4g4")
+volume_db = -2.811
+autoplay = true
+
+[connection signal="pressed" from="Panel/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

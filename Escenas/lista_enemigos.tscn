@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bml316e1pm0l"]
+
+[ext_resource type="Script" uid="uid://dc2yv73e17gr1" path="res://Escenas/lista_enemigos.gd" id="1_iw6yo"]
+
+[node name="lista_enemigos" type="Node2D"]
+script = ExtResource("1_iw6yo")
+
+[node name="TimerDisparo_enemigo" type="Timer" parent="."]
+wait_time = 0.6
+autostart = true
+
+[node name="Timer_enemigo4" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="TimerDisparo_enemigo" to="." method="_on_timer_disparo_enemigo_timeout"]
+[connection signal="timeout" from="Timer_enemigo4" to="." method="_on_timer_enemigo_4_timeout"]

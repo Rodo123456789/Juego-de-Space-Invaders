@@ -1,0 +1,132 @@
+[gd_scene load_steps=9 format=3 uid="uid://0bh5de7jd4ej"]
+
+[ext_resource type="Texture2D" uid="uid://bdlhjcqquxhhl" path="res://Sprites/enemigo1.png" id="1_be1cj"]
+[ext_resource type="Script" uid="uid://cldk2kq5p6fsw" path="res://Escenas/enemigo_1.gd" id="1_xbjft"]
+[ext_resource type="AudioStream" uid="uid://bvgy8tc0i2xrd" path="res://audios/exxxx.wav" id="3_0kt8l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qom0g"]
+size = Vector2(40, 40)
+
+[sub_resource type="Animation" id="Animation_4fos6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_vihwg"]
+resource_name = "destruido"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.466667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"desaparecer"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_jf2mx"]
+resource_name = "enemigo_1"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2y8sh"]
+_data = {
+&"RESET": SubResource("Animation_4fos6"),
+&"destruido": SubResource("Animation_vihwg"),
+&"enemigo_1": SubResource("Animation_jf2mx")
+}
+
+[node name="Enemigo1" type="CharacterBody2D" groups=["enemigos"]]
+script = ExtResource("1_xbjft")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_qom0g")
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(2, 1)
+scale = Vector2(0.176267, 0.198379)
+texture = ExtResource("1_be1cj")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_2y8sh")
+}
+autoplay = "enemigo_1"
+
+[node name="Timer_1" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="Timer_2" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 23)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = -9.0
+offset_top = -5.0
+offset_right = -3.0
+color = Color(0.887899, 0.115045, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 4.0
+offset_top = -5.0
+offset_right = 10.0
+color = Color(0.887899, 0.115045, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0kt8l")
+volume_db = -6.0
+
+[connection signal="timeout" from="Timer_1" to="." method="_on_timer_1_timeout"]
+[connection signal="timeout" from="Timer_2" to="." method="_on_timer_2_timeout"]

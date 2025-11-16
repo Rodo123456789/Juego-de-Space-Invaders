@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://k31j0rie5w7c"]
+
+[ext_resource type="FontFile" uid="uid://lu6bied6ff6" path="res://fondos_letras/AtariClassic-gry3.ttf" id="1_vbf1r"]
+[ext_resource type="FontFile" uid="uid://dvmcjo8qycmum" path="res://fondos_letras/AtariClassicExtrasmooth-LxZy.ttf" id="2_b7ycr"]
+[ext_resource type="FontFile" uid="uid://vpsh1pyktdqn" path="res://fondos_letras/AtariClassicChunky-PxXP.ttf" id="3_64ihq"]
+
+[sub_resource type="GDScript" id="GDScript_byi2e"]
+script/source = "extends Control
+
+func puntaje(A):
+	print(\"puntosss\")
+"
+
+[node name="puntaje" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_byi2e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -1.0
+offset_right = 860.0
+offset_bottom = 50.0
+grow_horizontal = 2
+
+[node name="titulo" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vbf1r")
+theme_override_font_sizes/font_size = 26
+text = "Puntos:
+"
+horizontal_alignment = 1
+max_lines_visible = 1
+
+[node name="puntaje" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_vbf1r")
+theme_override_font_sizes/font_size = 29
+text = "0"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 849.0
+offset_top = 14.0
+offset_right = 891.0
+offset_bottom = 48.0
+
+[node name="vidas" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_b7ycr")
+theme_override_font_sizes/font_size = 26
+text = "4
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 705.0
+offset_top = 16.0
+offset_right = 845.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("3_64ihq")
+theme_override_font_sizes/font_size = 20
+text = "Vidas ="
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 50.0
+offset_top = 32.0
+offset_right = 138.0
+offset_bottom = 77.0
+
+[node name="record" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_64ihq")
+theme_override_font_sizes/font_size = 26
+text = "0"

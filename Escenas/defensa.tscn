@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://bej0a4tciehq"]
+
+[ext_resource type="Script" uid="uid://b05febbh7tfib" path="res://Escenas/defensa.gd" id="1_olpnc"]
+[ext_resource type="Texture2D" uid="uid://cohksvhoqqtpf" path="res://Sprites/bloque.png" id="2_8tm3p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow8um"]
+size = Vector2(10, 10)
+
+[sub_resource type="Animation" id="Animation_ri8id"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_nxob3"]
+resource_name = "completo"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_x4o2t"]
+resource_name = "dañado"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cwcfj"]
+_data = {
+&"RESET": SubResource("Animation_ri8id"),
+&"completo": SubResource("Animation_nxob3"),
+&"dañado": SubResource("Animation_x4o2t")
+}
+
+[node name="defensa" type="StaticBody2D" groups=["defensas"]]
+script = ExtResource("1_olpnc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ow8um")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.454699, 0.583763, 0.609146, 1)
+texture_filter = 1
+position = Vector2(-4.47035e-07, 1.19209e-07)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_8tm3p")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cwcfj")
+}
+autoplay = "completo"

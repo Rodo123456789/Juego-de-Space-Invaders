@@ -1,0 +1,958 @@
+[gd_scene load_steps=10 format=3 uid="uid://dw3qe4qs805fl"]
+
+[ext_resource type="Script" uid="uid://dttfrf6rmf4o6" path="res://Escenas/test_1.gd" id="1_2xn7s"]
+[ext_resource type="PackedScene" uid="uid://bv0mmuxinw000" path="res://Escenas/jugador.tscn" id="1_4xy6t"]
+[ext_resource type="PackedScene" uid="uid://bej0a4tciehq" path="res://Escenas/defensa.tscn" id="5_b5g4n"]
+[ext_resource type="PackedScene" uid="uid://bml316e1pm0l" path="res://Escenas/lista_enemigos.tscn" id="6_h5hyj"]
+[ext_resource type="PackedScene" uid="uid://k31j0rie5w7c" path="res://Escenas/puntaje.tscn" id="6_kc3ue"]
+[ext_resource type="PackedScene" uid="uid://clnoyhjsxyygc" path="res://Escenas/base_inicial.tscn" id="6_p0lik"]
+[ext_resource type="Texture2D" uid="uid://bherdey6d4l6e" path="res://fondos/2.jpg" id="7_xgsb3"]
+[ext_resource type="AudioStream" uid="uid://b72e0ii8815x5" path="res://audios/Danger1.wav" id="8_v8053"]
+[ext_resource type="PackedScene" uid="uid://byo2tgqco2o6q" path="res://Escenas/pausa.tscn" id="10_f1d6j"]
+
+[node name="test_1" type="Node2D"]
+position = Vector2(-1, 0)
+script = ExtResource("1_2xn7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(450.266, 503.84)
+scale = Vector2(0.11816, 0.232482)
+texture = ExtResource("7_xgsb3")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 901.0
+offset_bottom = 1010.0
+
+[node name="Jugador" parent="." instance=ExtResource("1_4xy6t")]
+position = Vector2(449, 961)
+
+[node name="puntaje" parent="." instance=ExtResource("6_kc3ue")]
+
+[node name="base_1" type="Node2D" parent="."]
+position = Vector2(-336, 8)
+metadata/_edit_group_ = true
+
+[node name="defensa" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 828)
+
+[node name="defensa2" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 828)
+
+[node name="defensa3" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 828)
+
+[node name="defensa4" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 838)
+
+[node name="defensa5" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 848)
+
+[node name="defensa6" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 848)
+
+[node name="defensa7" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 848)
+
+[node name="defensa8" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 838)
+
+[node name="defensa9" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 828)
+
+[node name="defensa10" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 848)
+
+[node name="defensa11" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 788)
+
+[node name="defensa17" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 768)
+
+[node name="defensa29" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 768)
+
+[node name="defensa30" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 768)
+
+[node name="defensa20" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 798)
+
+[node name="defensa25" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 778)
+
+[node name="defensa27" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 768)
+
+[node name="defensa28" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 768)
+
+[node name="defensa26" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 788)
+
+[node name="defensa21" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 808)
+
+[node name="defensa22" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 818)
+
+[node name="defensa23" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 828)
+
+[node name="defensa24" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 838)
+
+[node name="defensa18" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 768)
+
+[node name="defensa19" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 778)
+
+[node name="defensa12" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 798)
+
+[node name="defensa13" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 808)
+
+[node name="defensa14" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 818)
+
+[node name="defensa15" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 828)
+
+[node name="defensa16" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 838)
+
+[node name="defensa31" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 788)
+
+[node name="defensa32" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 778)
+
+[node name="defensa33" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 778)
+
+[node name="defensa34" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 778)
+
+[node name="defensa35" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 778)
+
+[node name="defensa36" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 778)
+
+[node name="defensa37" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 778)
+
+[node name="defensa38" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 788)
+
+[node name="defensa39" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 788)
+
+[node name="defensa40" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 788)
+
+[node name="defensa41" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 788)
+
+[node name="defensa42" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 788)
+
+[node name="defensa43" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 798)
+
+[node name="defensa44" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 798)
+
+[node name="defensa45" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 798)
+
+[node name="defensa46" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 798)
+
+[node name="defensa47" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 798)
+
+[node name="defensa48" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 788)
+
+[node name="defensa49" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 788)
+
+[node name="defensa50" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 788)
+
+[node name="defensa51" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 808)
+
+[node name="defensa52" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 808)
+
+[node name="defensa53" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 808)
+
+[node name="defensa54" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 798)
+
+[node name="defensa55" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 798)
+
+[node name="defensa56" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 798)
+
+[node name="defensa57" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 828)
+
+[node name="defensa58" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 818)
+
+[node name="defensa59" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 818)
+
+[node name="defensa60" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 818)
+
+[node name="defensa61" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 818)
+
+[node name="defensa62" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 818)
+
+[node name="defensa63" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 818)
+
+[node name="defensa64" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 818)
+
+[node name="defensa65" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 818)
+
+[node name="defensa66" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 808)
+
+[node name="defensa67" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 808)
+
+[node name="defensa68" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 808)
+
+[node name="defensa69" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 808)
+
+[node name="defensa70" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 808)
+
+[node name="defensa71" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 838)
+
+[node name="defensa72" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 828)
+
+[node name="defensa73" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 828)
+
+[node name="defensa74" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 838)
+
+[node name="defensa75" parent="base_1" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 828)
+
+[node name="base_2" type="Node2D" parent="."]
+position = Vector2(-128, 0)
+metadata/_edit_group_ = true
+
+[node name="defensa" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 828)
+
+[node name="defensa2" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 828)
+
+[node name="defensa3" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 828)
+
+[node name="defensa4" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 838)
+
+[node name="defensa5" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 848)
+
+[node name="defensa6" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 848)
+
+[node name="defensa7" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 848)
+
+[node name="defensa8" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 838)
+
+[node name="defensa9" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 828)
+
+[node name="defensa10" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 848)
+
+[node name="defensa11" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 788)
+
+[node name="defensa17" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 768)
+
+[node name="defensa29" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 768)
+
+[node name="defensa30" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 768)
+
+[node name="defensa20" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 798)
+
+[node name="defensa25" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 778)
+
+[node name="defensa27" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 768)
+
+[node name="defensa28" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 768)
+
+[node name="defensa26" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 788)
+
+[node name="defensa21" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 808)
+
+[node name="defensa22" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 818)
+
+[node name="defensa23" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 828)
+
+[node name="defensa24" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 838)
+
+[node name="defensa18" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 768)
+
+[node name="defensa19" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 778)
+
+[node name="defensa12" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 798)
+
+[node name="defensa13" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 808)
+
+[node name="defensa14" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 818)
+
+[node name="defensa15" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 828)
+
+[node name="defensa16" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 838)
+
+[node name="defensa31" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 788)
+
+[node name="defensa32" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 778)
+
+[node name="defensa33" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 778)
+
+[node name="defensa34" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 778)
+
+[node name="defensa35" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 778)
+
+[node name="defensa36" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 778)
+
+[node name="defensa37" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 778)
+
+[node name="defensa38" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 788)
+
+[node name="defensa39" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 788)
+
+[node name="defensa40" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 788)
+
+[node name="defensa41" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 788)
+
+[node name="defensa42" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 788)
+
+[node name="defensa43" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 798)
+
+[node name="defensa44" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 798)
+
+[node name="defensa45" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 798)
+
+[node name="defensa46" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 798)
+
+[node name="defensa47" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 798)
+
+[node name="defensa48" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 788)
+
+[node name="defensa49" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 788)
+
+[node name="defensa50" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 788)
+
+[node name="defensa51" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 808)
+
+[node name="defensa52" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 808)
+
+[node name="defensa53" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 808)
+
+[node name="defensa54" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 798)
+
+[node name="defensa55" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 798)
+
+[node name="defensa56" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 798)
+
+[node name="defensa57" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 828)
+
+[node name="defensa58" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 818)
+
+[node name="defensa59" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 818)
+
+[node name="defensa60" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 818)
+
+[node name="defensa61" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 818)
+
+[node name="defensa62" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 818)
+
+[node name="defensa63" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 818)
+
+[node name="defensa64" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 818)
+
+[node name="defensa65" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 818)
+
+[node name="defensa66" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 808)
+
+[node name="defensa67" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 808)
+
+[node name="defensa68" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 808)
+
+[node name="defensa69" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 808)
+
+[node name="defensa70" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 808)
+
+[node name="defensa71" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 838)
+
+[node name="defensa72" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 828)
+
+[node name="defensa73" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 828)
+
+[node name="defensa74" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 838)
+
+[node name="defensa75" parent="base_2" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 828)
+
+[node name="base_3" type="Node2D" parent="."]
+position = Vector2(112, 0)
+metadata/_edit_group_ = true
+
+[node name="defensa" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 828)
+
+[node name="defensa2" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 828)
+
+[node name="defensa3" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 828)
+
+[node name="defensa4" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 838)
+
+[node name="defensa5" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 848)
+
+[node name="defensa6" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 848)
+
+[node name="defensa7" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 848)
+
+[node name="defensa8" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 838)
+
+[node name="defensa9" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 828)
+
+[node name="defensa10" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 848)
+
+[node name="defensa11" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 788)
+
+[node name="defensa17" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 768)
+
+[node name="defensa29" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 768)
+
+[node name="defensa30" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 768)
+
+[node name="defensa20" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 798)
+
+[node name="defensa25" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 778)
+
+[node name="defensa27" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 768)
+
+[node name="defensa28" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 768)
+
+[node name="defensa26" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 788)
+
+[node name="defensa21" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 808)
+
+[node name="defensa22" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 818)
+
+[node name="defensa23" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 828)
+
+[node name="defensa24" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 838)
+
+[node name="defensa18" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 768)
+
+[node name="defensa19" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 778)
+
+[node name="defensa12" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 798)
+
+[node name="defensa13" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 808)
+
+[node name="defensa14" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 818)
+
+[node name="defensa15" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 828)
+
+[node name="defensa16" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 838)
+
+[node name="defensa31" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 788)
+
+[node name="defensa32" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 778)
+
+[node name="defensa33" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 778)
+
+[node name="defensa34" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 778)
+
+[node name="defensa35" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 778)
+
+[node name="defensa36" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 778)
+
+[node name="defensa37" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 778)
+
+[node name="defensa38" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 788)
+
+[node name="defensa39" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 788)
+
+[node name="defensa40" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 788)
+
+[node name="defensa41" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 788)
+
+[node name="defensa42" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 788)
+
+[node name="defensa43" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 798)
+
+[node name="defensa44" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 798)
+
+[node name="defensa45" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 798)
+
+[node name="defensa46" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 798)
+
+[node name="defensa47" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 798)
+
+[node name="defensa48" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 788)
+
+[node name="defensa49" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 788)
+
+[node name="defensa50" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 788)
+
+[node name="defensa51" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 808)
+
+[node name="defensa52" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 808)
+
+[node name="defensa53" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 808)
+
+[node name="defensa54" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 798)
+
+[node name="defensa55" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 798)
+
+[node name="defensa56" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 798)
+
+[node name="defensa57" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 828)
+
+[node name="defensa58" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 818)
+
+[node name="defensa59" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 818)
+
+[node name="defensa60" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 818)
+
+[node name="defensa61" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 818)
+
+[node name="defensa62" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 818)
+
+[node name="defensa63" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 818)
+
+[node name="defensa64" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 818)
+
+[node name="defensa65" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 818)
+
+[node name="defensa66" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 808)
+
+[node name="defensa67" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 808)
+
+[node name="defensa68" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 808)
+
+[node name="defensa69" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 808)
+
+[node name="defensa70" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 808)
+
+[node name="defensa71" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 838)
+
+[node name="defensa72" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 828)
+
+[node name="defensa73" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 828)
+
+[node name="defensa74" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 838)
+
+[node name="defensa75" parent="base_3" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 828)
+
+[node name="base_4" type="Node2D" parent="."]
+position = Vector2(328, 0)
+metadata/_edit_group_ = true
+
+[node name="defensa" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 828)
+
+[node name="defensa2" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 828)
+
+[node name="defensa3" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 828)
+
+[node name="defensa4" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 838)
+
+[node name="defensa5" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 848)
+
+[node name="defensa6" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 848)
+
+[node name="defensa7" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 848)
+
+[node name="defensa8" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 838)
+
+[node name="defensa9" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 828)
+
+[node name="defensa10" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 848)
+
+[node name="defensa11" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 788)
+
+[node name="defensa17" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 768)
+
+[node name="defensa29" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 768)
+
+[node name="defensa30" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 768)
+
+[node name="defensa20" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 798)
+
+[node name="defensa25" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 778)
+
+[node name="defensa27" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 768)
+
+[node name="defensa28" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 768)
+
+[node name="defensa26" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 788)
+
+[node name="defensa21" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 808)
+
+[node name="defensa22" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 818)
+
+[node name="defensa23" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 828)
+
+[node name="defensa24" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(498, 838)
+
+[node name="defensa18" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 768)
+
+[node name="defensa19" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 778)
+
+[node name="defensa12" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 798)
+
+[node name="defensa13" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 808)
+
+[node name="defensa14" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 818)
+
+[node name="defensa15" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 828)
+
+[node name="defensa16" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(408, 838)
+
+[node name="defensa31" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 788)
+
+[node name="defensa32" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 778)
+
+[node name="defensa33" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 778)
+
+[node name="defensa34" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 778)
+
+[node name="defensa35" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 778)
+
+[node name="defensa36" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 778)
+
+[node name="defensa37" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 778)
+
+[node name="defensa38" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 788)
+
+[node name="defensa39" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 788)
+
+[node name="defensa40" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 788)
+
+[node name="defensa41" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 788)
+
+[node name="defensa42" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 788)
+
+[node name="defensa43" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 798)
+
+[node name="defensa44" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 798)
+
+[node name="defensa45" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 798)
+
+[node name="defensa46" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 798)
+
+[node name="defensa47" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 798)
+
+[node name="defensa48" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 788)
+
+[node name="defensa49" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 788)
+
+[node name="defensa50" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 788)
+
+[node name="defensa51" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 808)
+
+[node name="defensa52" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 808)
+
+[node name="defensa53" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 808)
+
+[node name="defensa54" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 798)
+
+[node name="defensa55" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 798)
+
+[node name="defensa56" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 798)
+
+[node name="defensa57" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 828)
+
+[node name="defensa58" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 818)
+
+[node name="defensa59" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 818)
+
+[node name="defensa60" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 818)
+
+[node name="defensa61" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 818)
+
+[node name="defensa62" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 818)
+
+[node name="defensa63" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(438, 818)
+
+[node name="defensa64" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 818)
+
+[node name="defensa65" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 818)
+
+[node name="defensa66" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 808)
+
+[node name="defensa67" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 808)
+
+[node name="defensa68" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(468, 808)
+
+[node name="defensa69" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(458, 808)
+
+[node name="defensa70" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(448, 808)
+
+[node name="defensa71" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 838)
+
+[node name="defensa72" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(488, 828)
+
+[node name="defensa73" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(478, 828)
+
+[node name="defensa74" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(418, 838)
+
+[node name="defensa75" parent="base_4" instance=ExtResource("5_b5g4n")]
+position = Vector2(428, 828)
+
+[node name="lista_enemigos" parent="." instance=ExtResource("6_h5hyj")]
+
+[node name="base_inicial" parent="." instance=ExtResource("6_p0lik")]
+position = Vector2(2, 991)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_v8053")
+autoplay = true
+
+[node name="pausa" parent="." instance=ExtResource("10_f1d6j")]
+process_mode = 3

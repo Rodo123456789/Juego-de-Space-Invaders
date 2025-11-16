@@ -1,0 +1,492 @@
+[gd_scene load_steps=27 format=3 uid="uid://btvo7umaw7ln0"]
+
+[ext_resource type="Texture2D" uid="uid://cin70pdmmul68" path="res://fondos/fondo 1.png" id="1_0jngu"]
+[ext_resource type="Script" uid="uid://dr2rkmv0c5hng" path="res://Escenas/panel_inicio.gd" id="1_i1eyn"]
+[ext_resource type="PackedScene" uid="uid://cj33ttiaddja0" path="res://Escenas/estrella.tscn" id="2_0hanr"]
+[ext_resource type="FontFile" uid="uid://lu6bied6ff6" path="res://fondos_letras/AtariClassic-gry3.ttf" id="3_geoi1"]
+[ext_resource type="FontFile" uid="uid://cvea6v0tf8hj3" path="res://fondos_letras/AtariClassicSmooth-XzW2.ttf" id="4_g5et4"]
+[ext_resource type="FontFile" uid="uid://vpsh1pyktdqn" path="res://fondos_letras/AtariClassicChunky-PxXP.ttf" id="6_gne6q"]
+[ext_resource type="Texture2D" uid="uid://bdlhjcqquxhhl" path="res://Sprites/enemigo1.png" id="7_c842v"]
+[ext_resource type="Texture2D" uid="uid://bvyo6bh7cyo1a" path="res://Sprites/alien1.png" id="8_hura2"]
+[ext_resource type="Texture2D" uid="uid://bom2bbo03tg31" path="res://Sprites/5.png" id="9_k2fg3"]
+[ext_resource type="Texture2D" uid="uid://d0a14itecbnnx" path="res://Sprites/enemigo4.png" id="10_fivj7"]
+[ext_resource type="AudioStream" uid="uid://c1ow066lux1yl" path="res://audios/intro.wav" id="11_dh4r4"]
+
+[sub_resource type="Animation" id="Animation_rnm1u"]
+resource_name = "1"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_sy77a"]
+resource_name = "2"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_22m7v"]
+resource_name = "3"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_nevx3"]
+resource_name = "4"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D4:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_fpii7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D3:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D4:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4lm0s"]
+_data = {
+&"1": SubResource("Animation_rnm1u"),
+&"2": SubResource("Animation_sy77a"),
+&"3": SubResource("Animation_22m7v"),
+&"4": SubResource("Animation_nevx3"),
+&"RESET": SubResource("Animation_fpii7")
+}
+
+[sub_resource type="Animation" id="Animation_jyon3"]
+resource_name = "2"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_5dv4x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4dygd"]
+_data = {
+&"2": SubResource("Animation_jyon3"),
+&"RESET": SubResource("Animation_5dv4x")
+}
+
+[sub_resource type="Animation" id="Animation_gvrk2"]
+resource_name = "3"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_d8638"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n5nup"]
+_data = {
+&"3": SubResource("Animation_gvrk2"),
+&"RESET": SubResource("Animation_d8638")
+}
+
+[sub_resource type="Animation" id="Animation_ysvpv"]
+resource_name = "4"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D4:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_1lnhc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D4:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f0bjq"]
+_data = {
+&"4": SubResource("Animation_ysvpv"),
+&"RESET": SubResource("Animation_1lnhc")
+}
+
+[node name="panel_inicio" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i1eyn")
+
+[node name="fondo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(449, 500)
+scale = Vector2(0.838889, 0.520833)
+texture = ExtResource("1_0jngu")
+
+[node name="estrellas" type="Node2D" parent="."]
+
+[node name="estrella" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(54, 69)
+
+[node name="estrella2" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(445, 109)
+
+[node name="estrella3" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(809, 437)
+
+[node name="estrella4" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(293, 347)
+
+[node name="estrella5" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(747, 323)
+
+[node name="estrella6" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(111, 353)
+
+[node name="estrella7" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(449, 291)
+
+[node name="estrella8" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(665, 231)
+
+[node name="estrella9" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(187, 197)
+
+[node name="estrella10" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(805, 93)
+
+[node name="estrella11" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(237, 571)
+
+[node name="estrella12" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(605, 585)
+
+[node name="estrella13" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(809, 641)
+
+[node name="estrella14" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(71, 641)
+
+[node name="estrella15" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(395, 721)
+
+[node name="estrella16" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(617, 803)
+
+[node name="estrella17" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(165, 823)
+
+[node name="estrella18" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(407, 937)
+
+[node name="estrella19" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(829, 925)
+
+[node name="estrella20" parent="estrellas" instance=ExtResource("2_0hanr")]
+position = Vector2(59, 949)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 218.0
+offset_right = 768.0
+offset_bottom = 829.0
+
+[node name="titulo" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = -75.0
+offset_top = 105.0
+offset_right = 695.0
+offset_bottom = 181.0
+theme_override_colors/font_color = Color(0.907049, 0, 0.179816, 1)
+theme_override_fonts/font = ExtResource("3_geoi1")
+theme_override_font_sizes/font_size = 55
+text = "Space Invaders"
+
+[node name="play" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 7.0
+offset_right = 394.0
+offset_bottom = 77.0
+theme_override_fonts/font = ExtResource("4_g5et4")
+theme_override_font_sizes/font_size = 29
+text = "PLAY"
+
+[node name="enemigo_1" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.291
+anchor_top = -0.421
+anchor_right = -0.291
+anchor_bottom = -0.421
+offset_left = 448.875
+offset_top = 492.231
+offset_right = 723.875
+offset_bottom = 537.231
+theme_override_fonts/font = ExtResource("6_gne6q")
+theme_override_font_sizes/font_size = 25
+text = "= ? Mystery
+"
+horizontal_alignment = 2
+
+[node name="enemigo_2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.291
+anchor_top = -0.421
+anchor_right = -0.291
+anchor_bottom = -0.421
+offset_left = 444.875
+offset_top = 588.231
+offset_right = 719.875
+offset_bottom = 627.231
+theme_override_fonts/font = ExtResource("6_gne6q")
+theme_override_font_sizes/font_size = 25
+text = "= 30 Points
+"
+horizontal_alignment = 2
+
+[node name="enemigo_3" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.291
+anchor_top = -0.421
+anchor_right = -0.291
+anchor_bottom = -0.421
+offset_left = 444.875
+offset_top = 686.231
+offset_right = 719.875
+offset_bottom = 720.231
+theme_override_fonts/font = ExtResource("6_gne6q")
+theme_override_font_sizes/font_size = 25
+text = "= 20 Points
+"
+horizontal_alignment = 2
+
+[node name="enemigo_4" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.291
+anchor_top = -0.421
+anchor_right = -0.291
+anchor_bottom = -0.421
+offset_left = 444.875
+offset_top = 768.231
+offset_right = 719.875
+offset_bottom = 807.231
+theme_override_fonts/font = ExtResource("6_gne6q")
+theme_override_font_sizes/font_size = 25
+text = "= 10 Points"
+horizontal_alignment = 2
+
+[node name="objetos" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="objetos"]
+texture_filter = 1
+position = Vector2(336, 746)
+scale = Vector2(0.279032, 0.341418)
+texture = ExtResource("7_c842v")
+hframes = 3
+
+[node name="Sprite2D2" type="Sprite2D" parent="objetos"]
+modulate = Color(0.254971, 0.831015, 0, 1)
+texture_filter = 1
+position = Vector2(333, 649)
+scale = Vector2(6.60795, 9.20313)
+texture = ExtResource("8_hura2")
+hframes = 3
+
+[node name="Sprite2D3" type="Sprite2D" parent="objetos"]
+texture_filter = 1
+position = Vector2(332, 550)
+scale = Vector2(0.271127, 0.248288)
+texture = ExtResource("9_k2fg3")
+hframes = 3
+
+[node name="Sprite2D4" type="Sprite2D" parent="objetos"]
+texture_filter = 1
+position = Vector2(332, 464)
+scale = Vector2(0.32936, 0.368392)
+texture = ExtResource("10_fivj7")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="objetos"]
+libraries = {
+&"": SubResource("AnimationLibrary_4lm0s")
+}
+autoplay = "1"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="objetos"]
+libraries = {
+&"": SubResource("AnimationLibrary_4dygd")
+}
+autoplay = "2"
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="objetos"]
+libraries = {
+&"": SubResource("AnimationLibrary_n5nup")
+}
+autoplay = "3"
+
+[node name="AnimationPlayer4" type="AnimationPlayer" parent="objetos"]
+libraries = {
+&"": SubResource("AnimationLibrary_f0bjq")
+}
+autoplay = "4"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_dh4r4")
+volume_db = -8.792
+autoplay = true
+
+[node name="salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 842.0
+offset_right = 527.0
+offset_bottom = 907.0
+theme_override_fonts/font = ExtResource("6_gne6q")
+theme_override_font_sizes/font_size = 22
+text = "SALIR
+"
+
+[connection signal="pressed" from="Panel/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="salir" to="." method="_on_button_pressed"]

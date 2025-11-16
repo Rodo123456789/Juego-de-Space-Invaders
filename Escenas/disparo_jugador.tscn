@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://boylu0gp0wqfb"]
+
+[ext_resource type="Script" uid="uid://ck6cqy013c1bd" path="res://Escenas/disparo_jugador.gd" id="1_0fto4"]
+[ext_resource type="Texture2D" uid="uid://cxlnuiuiniy8l" path="res://Sprites/disparoJugador.png" id="2_rty7y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7u1re"]
+
+[node name="disparo_jugador" type="Area2D"]
+script = ExtResource("1_0fto4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7u1re")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, 0)
+scale = Vector2(-4.50181, 2.85714)
+texture = ExtResource("2_rty7y")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
